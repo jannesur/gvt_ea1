@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktiv animierte Scheibe</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <h1>Interaktiv animierte Scheibe</h1>
+</header>
+
+
+<main class="container">
+
+    <!-- Animierte Scheibe -->
+    <section class="panel">
+        <h2>Animierte Scheibe</h2>
+        <p>
+            Mit den Tasten <b>L</b> und <b>R</b> wird die Scheibe um jeweils
+            15° gedreht, mit <b>A</b> wird die automatische Drehung gestartet
+            oder gestoppt. Alternativ können die Buttons als Bedienfläche
+            genutzt werden.
+        </p>
+        <div class="animation-area">
+            <img
+                    id="disc-image"
+                    class="disc-image"
+                    src="./assets/scheibe-01.png"
+                    alt="Animierte Scheibe"
+            >
+        </div>
+
+        <p id="angle-text" class="angle-text">
+            Aktueller Rotationszustand: 0°
+        </p>
+
+        <div class="controls">
+            <button id="left-button">
+                Links drehen (L)
+            </button>
+            <button id="auto-button">
+                Automatisch drehen (A)
+            </button>
+            <button id="right-button">
+                Rechts drehen (R)
+            </button>
+        </div>
+        <p id="status-text" class="status-text">
+            Automatische Drehung: Aus
+        </p>
+    </section>
+
+
+    <!-- Animierter Hase -->
+    <section class="panel">
+        <h2>Animierter Hase</h2>
+        <p>
+            Der Hase wird über ein Sprite-Sheet mit 8 Animationsphasen animiert.
+        </p>
+        <div class="rabbit-animation-area">
+            <div
+                    id="rabbit-sprite"
+                    class="rabbit-sprite"
+                    role="img"
+                    aria-label="Animierter hüpfender Hase">
+            </div>
+        </div>
+        <div class="controls">
+            <button id="rabbit-button">
+                Animation starten
+            </button>
+        </div>
+        <p id="rabbit-status-text" class="status-text">
+            Hasenanimation: Aus
+        </p>
+    </section>
+
+
+    <!-- Dokumentation -->
+    <section class="panel">
+        <h2>Dokumentation</h2>
+        <h3>Technische Umsetzung</h3>
+        <p>
+            Die Anwendung wurde mit HTML, CSS und JavaScript umgesetzt.
+            Die Scheibe besteht aus 24 Einzelbildern in jeweils 15°-Schritten.
+            JavaScript wechselt abhängig von der Benutzereingabe das angezeigte Bild.
+            Mit L und R kann die Scheibe schrittweise gedreht werden, während mit A
+            eine automatische Drehung gestartet oder gestoppt wird.
+            Alternativ können die Buttons als Bedienfläche genutzt werden. Der Hase wurde
+            als Sprite-Sheet mit 8 Animationsphasen umgesetzt. Die einzelnen Phasen
+            werden nacheinander über die CSS-Eigenschaft background-position angezeigt.
+        </p>
+        <h3>Bedienung</h3>
+        <ul>
+            <li>
+                <b>L:</b> Scheibe um 15° nach links drehen
+            </li>
+            <li>
+                <b>R:</b> Scheibe um 15° nach rechts drehen
+            </li>
+            <li>
+                <b>A:</b> Automatische Drehung starten oder stoppen
+            </li>
+            <li>
+                <b>Animation starten:</b> Hasenanimation starten oder stoppen
+            </li>
+        </ul>
+
+        <h3>Materialquellen</h3>
+        <p>
+            Hase:
+            https://pixabay.com/de/photos/hase-tier-natur-pelz-ohren-2649157/
+            <br>
+            Die Grafiken der Scheibe wurden selbst erstellt.
+        </p>
+    </section>
+
+</main>
+</body>
+</html>

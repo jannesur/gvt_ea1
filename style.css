@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef1f5;
+    color: #1f2937;
+}
+
+/* Überschrift */
+.header {
+    padding: 16px;
+    background: #214B83;
+    color: #ffffff;
+    border-bottom: 1px solid #193B68;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+/* Hauptbereich */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* Einzelne Bereiche */
+.panel {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+/* Bereich für die Scheibe */
+.animation-area {
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8fafc;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Scheibenbild */
+.disc-image {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+/* Aktueller Rotationszustand */
+.angle-text {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Bereich für den Hasen */
+.rabbit-animation-area {
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8fafc;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+/* Sprite-Sheet des Hasen */
+.rabbit-sprite {
+    width: 300px;
+    height: 300px;
+    background-image: url("./assets/hase-spritesheet.png");
+    background-size: 2400px 300px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+/* Buttons */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 18px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 1px solid #214B83;
+    border-radius: 10px;
+    background: #214B83;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #193B68;
+}
+
+button:focus {
+    outline: 3px solid #8EADD3;
+}
+
+/* Status */
+.status-text {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 16px;
+}
